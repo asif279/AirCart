@@ -23,25 +23,26 @@ document.getElementById("caseIncrease").addEventListener("click",function(){
     calculateCost ();
         };
     
-        document.getElementById("caseIncrease1").addEventListener("click",function(){
-            handleProductPrice1(true);
+        document.getElementById("increase").addEventListener("click",function(){
+           productPrice1(true);
             });
-            document.getElementById("caseDecrease1").addEventListener("click",function(){
+            document.getElementById("decrease").addEventListener("click",function(){
             
-                handleProductPrice1(false);
+                productPrice1(false);
                 });
-                function handleProductPrice1(isIncrease){
+                function productPrice1(isIncrease1){
     
                     var caseInput= document.getElementById("case-count1");
                     var caseCount = parseInt(caseInput.value);
             
                         var caseNewCount = caseCount;
-                        if(isIncrease == true ){
-                            caseNewCount =caseCount +1;
+                        if(isIncrease1 == true ){
+                            caseNewCount = caseCount + 1;
                         }
-                        else if(isIncrease == false && caseNewCount>0 ){
+                        else if(isIncrease1 == false && caseNewCount > 0 ){
                             caseNewCount =caseCount - 1;
                         }
+                        caseInput.value= caseNewCount;
     calculateCost ();
                 };
     
